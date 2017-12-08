@@ -4,6 +4,8 @@ ES6 est une mise à jour majeure de JavaScript qui comprend des dizaines de nouv
 
 On m'a souvent répété *"Ce qui se comprend, s'énonce clairement !"*. Ce sera donc aussi l'occasion pour moi d'apprendre et de m'assurer que j'ai correctement assimiler les différents concepts évoqués.
 
+Par ailleurs, expliquer ce que l'on a appris aux autres reste la meilleure façon de le retenir ([Feyman Technique](https://www.youtube.com/watch?v=_f-qkGJBPts))
+
 >**Note**: Ceci n'est pas une introduction à la programmation. Tu peux regarder [ça](https://thot.space/javascript/example) si c'est ce que tu voulais en venant ici.
 
 Au cours de mon apprentissage du JS, il m'arrivait fréquemment de me poser certaines questions. Voici leurs réponses.
