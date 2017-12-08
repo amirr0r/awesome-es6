@@ -1,10 +1,10 @@
 # ES6-Training
 
-ES6 est une mise à jour majeure de JavaScript qui comprend des dizaines de nouvelles fonctionnalités. En mettant l'accent sur la simplicité et la lisibilité, ce cours est un moyen efficace de découvrir ce qui est nouveau en JavaScript et, surtout, quand et comment vous devriez l'utiliser.
+ES6 est une mise à jour majeure de JavaScript qui comprend des dizaines de nouvelles fonctionnalités. En mettant l'accent sur la simplicité et la lisibilité, j'ai pour intention de décrire ce qui est nouveau en JS et, de montrer par le biais de nombreux exemples quand et comment l'utiliser.
+
+On m'a souvent répété *"Ce qui se comprend, s'énonce clairement !"*. Ce sera donc aussi l'occasion pour moi d'apprendre et de m'assurer que j'ai correctement assimiler les différents concepts évoqués.
 
 >**Note**: Ceci n'est pas une introduction à la programmation. Tu peux regarder [ça](https://thot.space/javascript/example) si c'est ce que tu voulais en venant ici.
-
-On m'a souvent répété *"Ce qui se comprend, s'énonce clairement !"*
 
 Au cours de mon apprentissage du JS, il m'arrivait fréquemment de me poser certaines questions. Voici leurs réponses.
 
