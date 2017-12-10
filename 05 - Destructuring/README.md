@@ -132,7 +132,7 @@ const bill1 = tipCalc1(obj)
 const bill2 = tipCalc2({ tip: 0.20, total: 200 })
 const bill3 = tipCalc2()
 
-console.log(bill1)
-console.log(bill2)
-console.log(bill3)
+console.log(bill1) // 264
+console.log(bill2) // 266
+console.log(bill3) // 128
 ```
