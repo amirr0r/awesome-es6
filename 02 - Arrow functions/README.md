@@ -17,7 +17,7 @@ const doStuff = (...args) => {
 doStuff()
 ```
 
-#### FUNCTION, ARROW FUNCTIONS & THIS
+## FUNCTION, ARROW FUNCTIONS & THIS
 
 Ce que je trouve cool chez les *arrow functions*:
  1. plus concises (elles expriment beaucoup de choses en peu de mot )
@@ -205,9 +205,9 @@ box.addEventListener('click', function() {
 ```
 
 
-#### **Quand est-ce qu'il ne faut pas utiliser les** *arrow functions* **?**
+## **Quand est-ce qu'il ne faut pas utiliser les** *arrow functions* **?**
 
-#####1. Quand tu as besoin d'ajouter à une classe le prototype d'une fonction 
+###1. Quand tu as besoin d'ajouter à une classe le prototype d'une fonction 
 ```js
 class Car {
     constructor(marque, couleur) { 
@@ -245,7 +245,7 @@ merco.description() // Mercedes Grey
 lambo.description() // Lambo White
 ```
 
-#####2. Quand tu as besoin du mot clé ```arguments```
+###2. Quand tu as besoin du mot clé ```arguments```
 
 Sans *arrow functions* :
 ```js
@@ -267,7 +267,7 @@ const childrenToArray = () => {
 childrenToArray('laurent', 'anojh') //  ReferenceError: arguments is not defined
 ```
 
-#####3. Bon pour celui là, tu fais comme tu veux (bind une méthode à un objet)
+3. Bon pour celui là, tu fais comme tu veux (bind une méthode à un objet)
 
 ```js
 const person = {
