@@ -76,7 +76,7 @@ const person = {
 const amir = {...person}
 amir.age++
 console.log(amir) // { name: 'amir', age: 20 }
-console.log(person // { name: 'amir', age: 19 }
+console.log(person) // { name: 'amir', age: 19 }
 
 const amir2017 = person
 amir2017.age++
