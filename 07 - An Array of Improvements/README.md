@@ -11,7 +11,7 @@ Souvent on se retrouve avec des *NodeList* ou *Object* et on est bien embêté p
 ```js
 const people = document.querySelectorAll('.people > p') // NodeList
 ```
-[NodeList](NodeList.png)
+![NodeList](NodeList.png)
 
 On peut convertir ces structures en tableau (array) de deux manières différentes.
 
@@ -19,7 +19,7 @@ On peut convertir ces structures en tableau (array) de deux manières différent
 // 1
 Array.from(people) // Array
 // 2
-[...people] // people
+[...people] // Array
 ```
 
 L'avantage avec ```Array.from```, c'est qu'il est plus facilement compréhensible par vos pairs et qu'il peut prendre une fonction **map** en second argument :
@@ -39,6 +39,6 @@ Il y a d'autres méthodes intéressantes mais je te laisse les découvrir :
 - [`Array.some`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 - [`Array.every`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
-...et les incontournables :
+... et les incontournables :
 
 ![map-filter-reduce-in-emoji](map-filter-reduce-in-emoji-1.png)
