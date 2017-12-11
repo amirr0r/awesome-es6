@@ -1,6 +1,6 @@
 On note plusieurs améliorations sur les `Objects` . En voici quelques-unes :
 
-#1
+# 1
 Avant ES6 :
 ```js
 const first = 'snickers';
@@ -33,7 +33,7 @@ const dog = {
 console.log(dog) // { first: 'snickers', last: 'bos', age: 2, breed: 'King Charles Cav' }
 ```
 
-#2
+# 2
 Avant ES6 :
 ```js
 const modal = {
@@ -64,7 +64,7 @@ const modal = {
 }
 ```
 
-#3
+# 3
 Avant ES6:
 ```js
 const keys = ['size', 'color', 'weight']
