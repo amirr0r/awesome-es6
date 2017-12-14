@@ -20,9 +20,9 @@ doStuff()
 ## FUNCTION, ARROW FUNCTIONS & THIS
 
 Ce que je trouve cool chez les *arrow functions*:
- 1. plus concises (elles expriment beaucoup de choses en peu de mot )
- 2. return en une ligne
- 3. on peut jouer avec le ```this```
+ - plus concises (elles expriment beaucoup de choses en peu de mot )
+ - return en une ligne
+ - on peut jouer avec le ```this```
 
 Exemples:
 
@@ -154,10 +154,7 @@ On peut donc en jouer. Exemple avec HTML + CSS :
 <script type="text/javascript" src="app.js"></script>
 </html>
 ```
-
-![resultat HTML + CSS + JS](example.gif)
-
-
+On voit bien ici que le `this` n'est pas le même.
 ```javascript
 const box = document.querySelector('.box')
 
@@ -168,6 +165,8 @@ box.addEventListener('click', function() {
 })
 
 ```
+
+Maintenant pour obtenir ce résultat quand je clique sur la div : ![resultat HTML + CSS + JS](example.gif)
 
 Avant ES6 :
 ```javascript
@@ -203,11 +202,11 @@ box.addEventListener('click', function() {
       setTimeout(() => this.classList.toggle(second))
     })
 ```
-
+En réalité, ici je peux remplacer le `this` par box et du coup, utiliser une arrow function. Toutefois (...ajouter exemples avec liste)
 
 ## **Quand est-ce qu'il ne faut pas utiliser les** *arrow functions* **?**
 
-###1. Quand tu as besoin d'ajouter à une classe le prototype d'une fonction 
+### 1. Quand tu as besoin d'ajouter à une classe le prototype d'une fonction 
 ```js
 class Car {
     constructor(marque, couleur) { 
@@ -245,7 +244,7 @@ merco.description() // Mercedes Grey
 lambo.description() // Lambo White
 ```
 
-###2. Quand tu as besoin du mot clé ```arguments```
+### 2. Quand tu as besoin du mot clé ```arguments```
 
 Sans *arrow functions* :
 ```js
@@ -267,7 +266,7 @@ const childrenToArray = () => {
 childrenToArray('laurent', 'anojh') //  ReferenceError: arguments is not defined
 ```
 
-3. Bon pour celui là, tu fais comme tu veux (bind une méthode à un objet)
+### 3. Bon pour celui là, tu fais comme tu veux (bind une méthode à un objet)
 
 ```js
 const person = {
@@ -308,7 +307,7 @@ console.log(person.points) // 23
 
 # **CONCLUSION**
 
-J'utilise *arrow function* par défaut, et *function* que dans les cas où je dois utiliser ```this```.
+J'utilise les *arrow functions* par défaut, et le mot clé *function* que dans les cas où je dois utiliser ```this```.
 
 ## PS
 
