@@ -91,9 +91,9 @@ Lorsqu'on déclare une variable en dehors des **blocs**, on dit d'elle que c'est
 Pourtant avec ```var``` :
 
 ```javascript
-var age = 42
+var age = 42 // ici age est une variable globale
 if (age > 12) {
-    var dogYears = age * 7
+    var dogYears = age * 7 // ici gogYears est une variable locale
     // console.log('You are ' + dogYears + ' dog years old')
     // console.log('You are',dogYears,'dog years old')
     console.log(`You are ${dogYears} dog years old`)
