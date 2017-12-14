@@ -20,7 +20,7 @@ faireQqc(function(result) {
 ```
 
 Mais là encore il y a plusieurs problèmes :
-- le code devient verbeux (parle beaucoup,utilise beaucoup de mots, souvent pour dire peu.)
+- le code devient verbeux (parle beaucoup, utilise beaucoup de mots, souvent pour dire peu.)
 - mais aussi difficile à lire et à comprendre
 - cela implique que ça devient plus compliqué de le faire évoluer.
 
@@ -43,9 +43,9 @@ faireQqc()
 
 ## Comment est-ce qu'on les utilises ?
 
-Pour reprendre l'exemple de [Jecelyn Yeen](https://scotch.io/tutorials/javascript-promises-for-dummies), imagine que t'es un **gamin**. Ta **maman** te *promet* de t'acheter un ***téléphone**.
+Pour reprendre l'exemple de [Jecelyn Yeen](https://scotch.io/tutorials/javascript-promises-for-dummies), imagine que t'es un **gamin**. Ta **maman** te *promet* de t'acheter un **téléphone**.
 
-Elle peut très bien ne pas tenir sa *promesse* si tu n'as pas été **sage**... par exemple.
+Elle peut très bien ne pas tenir sa *promesse* : si tu n'as pas été **sage** par exemple.
 
 On sait que la *promesse* peut être soit : 
 - **pending** (*en attente*) : état initial, la promesse n'est ni remplie, ni rompue 
@@ -61,7 +61,7 @@ new Promise( function(success, failure) { ... } );
 
 On appelle donc la fonction :
 - `success` si l'opération a réussie.
-- `failure` lorsquel'opération a échouée.
+- `failure` lorsque l'opération a échouée.
 
 >Généralement, et même sur la doc, ces fonctions s'apellent `resolve` et `reject` mais cela n'as pas d'importance.
 
@@ -69,7 +69,7 @@ On appelle donc la fonction :
 const enfantSage = true
 
 // Promise
-const avoirUnTel = new Promise((success, failure) => {
+const avoirUnPhone = new Promise((success, failure) => {
     if (enfantSage) {
         const phone = {
             marque: 'Iphone',
@@ -82,7 +82,7 @@ const avoirUnTel = new Promise((success, failure) => {
     }
 })
 //pending ..
-avoirUnTel
+avoirUnPhone
     .then(phone => console.log(phone))
     // enfantSage = true -> { marque: 'Iphone', couleur: 'blanc' }
     .catch(raison => console.log(raison))
@@ -105,7 +105,7 @@ reponseRH
     .then(reponse => console.log(reponse)) // en cas de success
     .catch(refus => console.err(refus)) // en cas de failure
 ```
-[promise-example-1](entretien-success.gif)
+![promise-example-1](entretien-success.gif)
 
 - Failure.
 ```js
@@ -121,7 +121,7 @@ reponseRH
     .then(reponse => console.log(reponse)) // en cas de success
     .catch(refus => console.error(refus)) // en cas de failure
 ```
-[promise-example-2](entretien-failure.gif)
+![promise-example-2](entretien-failure.gif)
 
 ### Chaîner les promesses
 
@@ -152,7 +152,8 @@ const getPostById = (id) => {
     },200)
   })
 }
-const hydrateAuthor = (post) => {
+
+const joinAuthor = (post) => {
   return new Promise((success, failure) => {
     // simule le fait que ça prend du temps vu que c'est une pseudo-requête
     setTimeout(() => {
@@ -169,7 +170,7 @@ const hydrateAuthor = (post) => {
 }
 
 getPostById(1)
-  .then(post => hydrateAuthor(post))
+  .then(post => joinAuthor(post))
   .then(author => console.log(author))
   .catch(err => console.error(err))
 // { title: 'I love JavaScript',
@@ -213,10 +214,10 @@ Promise
 
 ```
 
-> **Note** : Installez browser-sync, il vous permettra d'émuler un serveur web avec la commande `npm install -g browser-sync`. Autrement vous obtiendrez une erreur car votre url commence par *file:/*.
+> **Note** : Installez browser-sync, il vous permettra d'émuler un serveur web avec la commande `npm install -g browser-sync`. Autrement vous obtiendrez une erreur car votre url commence par *file://*.
 > Une fois fait, lancez votre serveur avec `browser-sync start --directory --server --files "*.js, *.html, *.css"`.
 
-[RATP-Posts-answer.png](RATP-Posts-answer.png)
+![RATP-Posts-answer.png](RATP-Posts-answer.png)
 
 ## Liens utiles
 
