@@ -97,6 +97,7 @@ import couponCodes from './helper';
 ## Erreurs fréquentes et Webpack 
 
 Cette erreur doit vous être familière :
+
 ![error](error.png)
 
 Puisque nos navigateurs ne comprennent pas encore les modules ES6, nous avons besoin d'outils pour les faire fonctionner aujourd'hui. Pour celà, on utilise un `bundler` qui s'occupera de compiler notre code en un seul fichier Javascript ou en plusieurs bundles pour différentes parties de votre application. 
@@ -108,7 +109,7 @@ Je vais ici installer `webpack` avec `npm install webpack --save` pour ne plus a
 - La clé `output:` qui indique e nom de fichier que nous aimerions que webpack génère.
 - La clé `module:` qui contient le tableau `loaders`. Ce dernier indique à webpack comment il doit gérer des types spécifiques de fichiers.
 
-```js
+```json
 module.exports = {
     entry: './app.js',
     output: {
