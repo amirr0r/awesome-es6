@@ -1,6 +1,6 @@
 # Symbols
 
-Un symbol, un peu comme un *hash*, est un type de données unique et inchangeable. Seulement il est généralement utilisé pour représenter des identifiants pour des propriétés d'un objet. Ce qui suit n'est qu'un grossier résumé de cet [article](http://putaindecode.io/fr/articles/js/es2015/symbols/).
+Un symbol, un peu comme un *hash*, est un type de données unique et inchangeable. Généralement, il est utilisé pour représenter des identifiants pour des propriétés d'un objet. Ce qui suit n'est qu'un grossier résumé de cet [article](http://putaindecode.io/fr/articles/js/es2015/symbols/).
 
 # Créer un symbol
 
