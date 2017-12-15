@@ -28,6 +28,7 @@ Rien ne vaut une [démo](https://eslint.org/demo/)
 
 La première fois, lancez `eslint --init`, il vous posera des questions de ce genre :
 ![eslint--init](eslint--init.png)
+
 Maintenant lancez `eslint filename.js`, vous obtiendrez les erreurs :
 ![eslint--errors](eslint-errors.png)
 
