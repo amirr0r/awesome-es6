@@ -6,7 +6,7 @@ On m'a souvent répété *"Ce qui se comprend, s'énonce clairement !"*. Ce sera
 
 Par ailleurs, expliquer ce que l'on a appris aux autres reste la meilleure façon de le retenir ([Feyman Technique](https://www.youtube.com/watch?v=_f-qkGJBPts))
 
->**Note**: Ceci n'est pas une introduction à la programmation. Tu peux regarder [ça](https://thot.space/javascript/example) si c'est ce que tu voulais en venant ici.
+>**Note**: Ceci n'est pas une introduction à la programmation. Tu peux lire [ça](https://thot.space/javascript/example) et/ou regarder cette [playlist](https://www.youtube.com/playlist?list=PLnS-t85xRSrIC8Ytj-UslCO4iEqr_hJnI) si c'est ce que tu voulais en venant ici.
 
 Au cours de mon apprentissage du JS, il m'arrivait fréquemment de me poser certaines questions. Voici leurs réponses.
 
