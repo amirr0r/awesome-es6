@@ -109,7 +109,7 @@ Je vais ici installer `webpack` avec `npm install webpack --save` pour ne plus a
 - La clé `output:` qui indique e nom de fichier que nous aimerions que webpack génère.
 - La clé `module:` qui contient le tableau `loaders`. Ce dernier indique à webpack comment il doit gérer des types spécifiques de fichiers.
 
-```json
+```js
 module.exports = {
     entry: './app.js',
     output: {
