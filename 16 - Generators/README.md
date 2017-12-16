@@ -64,20 +64,20 @@ C'est un pattern très pratique, pour les listes infinies par exemple :
 
 ```js
 function* fibo() {
-  let [a, b] = [1, 1];
+  let [a, b] = [1, 1]
   while (true) {
     // Who can stop me?
-    [a, b] = [b, a + b];
-    yield a;
+    [a, b] = [b, a + b]
+    yield a
   }
 }
 
-const iterator = fibo();
+const iterator = fibo()
 for (let n of iterator) {
   if (n >= 100) {
-    break; // *I* can stop you
+    break // *I* can stop you
   }
-  console.log(n);
+  console.log(n)
 }
 // 1 2 3 5 8 13 21 34 55 89
 ```
@@ -88,25 +88,39 @@ for (let n of iterator) {
 ```js
 function* math() {
   // Le premier appel à next() permet de "démarrer" le générateur
-  const x = yield; // la valeur de la première itération sera undefined
+  const x = yield // la valeur de la première itération sera undefined
   // x = le paramètre du second appel à next() -> 33
-  const y = yield x + 1; // valeur de la seconde itération : x + 1
+  const y = yield x + 1 // valeur de la seconde itération : x + 1
   // y = paramètre du troisième appel à next() -> 27
-  yield y; // valeur de la troisième itération : y
+  yield y // valeur de la troisième itération : y
   // le 4e appel (et +) à next() retournent { value: undefined, done: true }
 }
 
-const iterator = math();
-iterator.next(42); // { value: undefined, done: false }
+const iterator = math()
+iterator.next(42) // { value: undefined, done: false }
 // Passer un paramètre au premier appel à next() n'est pas utile : cette valeur
 // n'est pas accessible dans le générateur car aucun "yield" correspondant
 
-iterator.next(33); // { value: 34, done: false }, x = 33 dans le générateur
-iterator.next(27); // { value: 27, done: false }, y = 27 dans le générateur
-iterator.next(); // { value: undefined, done: true 
+iterator.next(33) // { value: 34, done: false }, x = 33 dans le générateur
+iterator.next(27) // { value: 27, done: false }, y = 27 dans le générateur
+iterator.next() // { value: undefined, done: true 
 ```
 
-C'est plutôt cool, notamment en Ajax :
+Un autre exemple sera peut-être plus parlant :
+```js
+function* gen() {
+  while(true) {
+    var value = yield null
+    console.log(value) // ici le programme finira par afficher 2
+  }
+}
+
+var g = gen()
+g.next(1) // "{ value: null, done: false }"
+g.next(2) // "{ value: null, done: false }"
+```
+
+## Ajax Exemple
 
 ```js
 const ajax = url => fetch(url)
