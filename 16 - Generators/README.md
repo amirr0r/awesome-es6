@@ -7,7 +7,7 @@ Un **générateur** c'est en quelque sorte une fonction qui a plusieurs *return*
 
 > Pour ceux qui viennent du C, cela peut s'apparenter aux instructions de contrôle..mais en plus utiles !
 
-Exemples :
+## Fonction "en pause"
 ```js
 /* Exemple - 1 */
 function* myGenerator() {
@@ -60,13 +60,59 @@ console.log(inventorGen.next())
 // ...
 ```
 
+C'est un pattern très pratique, pour les listes infinies par exemple :
+
+```js
+function* fibo() {
+  let [a, b] = [1, 1];
+  while (true) {
+    // Who can stop me?
+    [a, b] = [b, a + b];
+    yield a;
+  }
+}
+
+const iterator = fibo();
+for (let n of iterator) {
+  if (n >= 100) {
+    break; // *I* can stop you
+  }
+  console.log(n);
+}
+// 1 2 3 5 8 13 21 34 55 89
+```
+
+
+## Passage de valeur au générateur
+
+```js
+function* math() {
+  // Le premier appel à next() permet de "démarrer" le générateur
+  const x = yield; // la valeur de la première itération sera undefined
+  // x = le paramètre du second appel à next() -> 33
+  const y = yield x + 1; // valeur de la seconde itération : x + 1
+  // y = paramètre du troisième appel à next() -> 27
+  yield y; // valeur de la troisième itération : y
+  // le 4e appel (et +) à next() retournent { value: undefined, done: true }
+}
+
+const iterator = math();
+iterator.next(42); // { value: undefined, done: false }
+// Passer un paramètre au premier appel à next() n'est pas utile : cette valeur
+// n'est pas accessible dans le générateur car aucun "yield" correspondant
+
+iterator.next(33); // { value: 34, done: false }, x = 33 dans le générateur
+iterator.next(27); // { value: 27, done: false }, y = 27 dans le générateur
+iterator.next(); // { value: undefined, done: true 
+```
+
 C'est plutôt cool, notamment en Ajax :
 
 ```js
 const ajax = url => fetch(url)
     .then(data => data.json())
     .then(data => dataGen.next(data)) 
-    // stockera dans la variable correponsdante le résultat de la requête
+    // stockera dans la variable correponsdante, le résultat de la requête
     // puis passera à la suivante
 
 function* steps() {
@@ -114,6 +160,6 @@ for (const ligne of chant) {
 // Noooon
 ```
 
-## Liens utiles
+## Ressources
 
-- [.](http://putaindecode.io/fr/articles/js/es2015/generators/)
+- [Itérateurs et générateurs](http://putaindecode.io/fr/articles/js/es2015/generators/)
