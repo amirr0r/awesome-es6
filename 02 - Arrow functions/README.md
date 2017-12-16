@@ -206,7 +206,7 @@ En réalité, ici je peux remplacer le `this` par box et du coup, utiliser une a
 
 ## **Quand est-ce qu'il ne faut pas utiliser les** *arrow functions* **?**
 
-### 1. Quand tu as besoin d'ajouter à une classe le prototype d'une fonction 
+### 1. Quand tu as besoin d'ajouter le prototype d'une fonction à une classe 
 ```js
 class Car {
     constructor(marque, couleur) { 
@@ -244,7 +244,7 @@ merco.description() // Mercedes Grey
 lambo.description() // Lambo White
 ```
 
-### 2. Quand tu as besoin du mot clé ```arguments```
+### 2. Quand tu as besoin du mot clé [`arguments`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)
 
 Sans *arrow functions* :
 ```js
