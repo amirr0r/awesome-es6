@@ -97,5 +97,7 @@ Oui toi sans doute, mais tes utilisateurs peut-être pas...
 
 Imaginez que vous développez une API, vos utilisateurs auront certainement besoin d'utiliser vos objets. Eh bien, l'objet `Proxy` va vous permettre de mieux contrôler leur accès et utilisation.
 
+>Je vous laisse jeter un coup d'oeil au [Proxy revocable](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy/revocable)
+
 ## Articles
 - [ES6, ES2015 : les Proxy](http://putaindecode.io/fr/articles/js/es2015/proxy/)
