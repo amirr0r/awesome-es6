@@ -91,11 +91,11 @@ notes[2] = 20
 ```
 
 Bon ok, mais en quoi est-ce utile ? Est-ce que c'est vraiment nécessaire ?
-Je fais attention quand j'utilise mes objets. Je ne suis pas bête.
+*Je fais attention quand j'utilise mes objets. Je ne suis pas bête.*
 
 Oui toi sans doute, mais tes utilisateurs peut-être pas...
 
-Imaginez que vous développez une API, vos utilisateurs auront certainement besoin d'utiliser vos objets. Eh bien, l'objet `Proxy` va vous permettre de mieux contrôler leur utilisation.
+Imaginez que vous développez une API, vos utilisateurs auront certainement besoin d'utiliser vos objets. Eh bien, l'objet `Proxy` va vous permettre de mieux contrôler leur accès et utilisation.
 
 ## Articles
 - [ES6, ES2015 : les Proxy](http://putaindecode.io/fr/articles/js/es2015/proxy/)
