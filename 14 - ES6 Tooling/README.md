@@ -1,8 +1,7 @@
-# 1. SystemJS
+# ES6 Tooling
 
+## 1. SystemJS
 Si tu trouves qu'utiliser `webpack` c'est long, qu'il y avait beaucoup de choses à faire, je te conseille d'utilser `SystemJS`.
-
-## Comment l'utiliser ?
 
 Insérer dans votre fichier html la ligne suivante :
 ```html
@@ -56,7 +55,7 @@ console.log(addTax(100, 0.15))
 
 >Vous contaterez qu'il prends quelques secondes avant de se lancer. Je le ne recommande donc pas si vous développez une grosse application.
 
-# 2. Babel
+## 2. Babel
 
 Dans le cas où votre appli doit pouvoir tourner sur des vieilles versions de navigateur, vous allez devoir utiliser un `transpiler` commme [Babel](https://babeljs.io/).
 
@@ -64,7 +63,7 @@ Je vous recommande de suivre ce [lien](https://medium.com/@tmtushar28/getting-st
 
 >Vous devez apprendre à lire de la doc, chercher sur Google. J'ai intentionnellement laisser les liens pour Babel, sans décrire les étapes pour que vous vous débrouillez.
 
-# 3. Polyfill
+## 3. Polyfill
 
 Ok on sait maintenant que **Babel** convertit notre code ES6 en code ES5. 
 Mais nous n'avons fait ici que la moitié du chemin.
