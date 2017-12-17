@@ -224,4 +224,3 @@ Promise
 ## Liens utiles
 
 - [Utiliser les promesses](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses)
-- 
