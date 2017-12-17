@@ -1,3 +1,5 @@
+# [`Destructuring`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Affecter_par_d%C3%A9composition)
+
 Comment extraire des données d'une structure efficacement ?
 
 ## Objects
@@ -27,21 +29,18 @@ const { first, last, twitter } = person
 ```
 
 C'est le même résultat :
-
 ```js
 console.log(first) // Ali
 console.log(last) // Gator
 console.log(twitter) // @redbull11570
 ```
 
-Maintenant si tu veux renommer leurs noms :
-
+Maintenant pour renommer le nom des variables que tu récupère :
 ```js
 const {last: nom, snapchat: snap} = person
 
 console.log(nom) // Gator
 console.log(snap) // aghostor
-
 ```
 
 Enfin, pour extraire les propriétés d'un *objet* contenu dans un *objet* :
@@ -76,6 +75,7 @@ const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings
 // s'il n'y a pas de variable width, il en créé une et l'initiliase à 100
 // même chose pour height ...
 ```
+
 ## Arrays
 
 Pour extraire les éléments d'un tableau *array* :
@@ -92,8 +92,7 @@ Tu vas perdre un temps fou, utilise plutôt ça :
 ```js
 const [name, age, website] = details
 ```
-
-Il y aussi ce qu'on appelle le *rest operator* ```...``` :
+Il y aussi ce qu'on appelle le *rest param* `...` :
 ```js
 const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker']
 
@@ -105,7 +104,6 @@ console.log(players) // ['Sarah', 'Keegan', 'Riker']
 ```
 
 Si tu te souviens bien, dans le **README** sur les *Arrow Functions*. J'utilisais un exemple similaire à celui-ci :
-
 ```js
 let first = 'Sangoku';
 let second = 'Vegeta';
@@ -114,9 +112,7 @@ console.log(first, second); // Sangoku Vegeta
 [first, second] = [second, first];
 console.log(first, second); // Vegeta Sangoku
 ```
-
-
-> Ici si je retire le ```;``` j'ai une erreur.
+> Ici si je retire le `;` j'ai une erreur.
 
 Esssaye de comprendre et de décortiquer ce bout de code :
 ```js
