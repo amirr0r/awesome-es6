@@ -47,10 +47,11 @@ Exemple :
     },
     "extends" : "eslint:recommended",
     "rules" : {
-        "no-console" : 0 // j'aurais aussi pu mettre "off"
+        "no-console" : 0
     }
 }
 ```
+> j'aurais aussi pu mettre "off" à la place de 0
 
 ## Airbnb ESLint paramètres
 
