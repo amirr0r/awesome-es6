@@ -1,4 +1,4 @@
-# ESLINT
+# [`ESLINT`](https://eslint.org/)
 
 Le linting (**"linter"** son code) est une pratique qui vise à **améliorer la qualité de votre code** et de ce fait la **reprise** et la **maintenabilité** de celui-ci.
 
@@ -6,7 +6,7 @@ Le linting (**"linter"** son code) est une pratique qui vise à **améliorer la 
 
 Au cours de ma Piscine à 42, nous les *piscineux* étions obligé d'utiliser ce qu'on appelle la [`Norme`](https://ncoden.fr/datas/42/norm.pdf). Sinon, la `Moulinette`, *le programme qui corrigeait nos exercices*, nous mettait 0 d'office. Ainsi lorsque l'on devait corriger ou travailler avec quelqu'un, relire son code et essayer de le comprendre fut d'autant plus facile.
 
-Celà peut paraître chiant, voir inutile, mais croyez moi, ce n'est pas toujours simple quand on bosse sur de [gros projets en équipe](#) de repasser et d'utiliser ce que les autres ont écris.
+Celà peut paraître chiant, voir inutile, mais croyez moi, ce n'est pas toujours simple quand on bosse sur de gros projets en équipe de repasser et d'utiliser ce que les autres ont écris.
 
 Enfin bref, **ESLint** est un linteur, il aide les développeurs JavaScript à produire du code propre (*des linteurs existent dans quasiment tous les langages et ils peuvent parfois être directement implémentés dans vos IDE.*). 
 
