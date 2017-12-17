@@ -1,4 +1,4 @@
-# Generators
+# [`Generators`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Générateurs)
 
 >Un **générateur** est un type de fonction spécial qui fonctionne comme une fabrique (factory) d'**itérateurs**. Une fonction devient un générateur lorsqu'elle contient une ou plusieurs expressions `yield` et qu'elle utilise la syntaxe `function*`. Source [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Générateurs)
 
