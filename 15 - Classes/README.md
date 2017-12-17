@@ -1,4 +1,4 @@
-# Classes
+# [`Classes`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes)
 
 >J'estime que tu as déjà des bases en programmation orientée objet.
 
@@ -39,7 +39,7 @@ merco.description() // Mercedes Grey
 lambo.description() // Lambo White
 ```
 
-## Getters & Setters
+## Setters
 
 On ajoute des `setters` de cette manière :
 ```js
@@ -80,6 +80,7 @@ console.log(merco)
 //   modele: '             2017' }
 ```
 
+## Getters
 Pour récupérer le modele, vous remarquerez que :
 ```js
 // ... 
