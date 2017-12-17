@@ -1,40 +1,48 @@
-Ok donc pour déclarer des fonctions, tu connais sûrement :
+# [`ARROW FUNCTION`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es), [`FUNCTION`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions) & [`THIS`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this)
 
-```javascript
-function doStuff(...args) {
+Ok donc pour déclarer des fonctions, tu connais sûrement :
+```js
+function doStuff() {
     // ... code
 }
 ```
 
 Mais il y aussi ce qu'on appelle des **fonctions anonymes** (tu verras plus tard en quoi elles sont pratiques).
-
-```javascript
+```js
 // en l'occurence, là j'assigne la fonction anonyme à ma variable doStuff
-const doStuff = (...args) => {
-
+const doStuff = () => {
+  // ... code
 }
 // Désormais je peux l'utiliser comme une fonction
 doStuff()
 ```
 
-## FUNCTION, ARROW FUNCTIONS & THIS
+## ARROW FUNCTION
 
 Ce que je trouve cool chez les *arrow functions*:
  - plus concises (elles expriment beaucoup de choses en peu de mot )
- - return en une ligne
+ - return implicite (en une ligne)
  - on peut jouer avec le ```this```
 
-Exemples:
+### Return implicite
 
-```javascript
-// Arrow functions
+```js
+// Avant ES6
+function add(a, b){
+  return a + b
+}
+// Depuis ES6
+const add = (a, b) => a + b
+```
+
+### Plus concises
+```js
 const names = ['Barbès','Raspail', 'Haussman', 'Voltaire'];
 // Elles renvoient toutes :
 //[ 'Boulevard Barbès',
 //  'Boulevard Raspail',
 //  'Boulevard Haussman',
 //  'Boulevard Voltaire' ]
-  
   const fullNames = names.map(function(name) {
     return `Boulevard ${name}`
   })
@@ -50,6 +58,8 @@ const names = ['Barbès','Raspail', 'Haussman', 'Voltaire'];
   const fullNames4 = names.map(name => `Boulevard ${name}`)
 
 ```
+
+## This
 
 Le ```this``` des *arrow functions* n'est pas le même que celui des *functions*. En effet, dans une *arrow function*, ```this``` est égal à la valeur de ```this``` dans le contexte précédent. Cela signifie que contrairement aux *functions*, les *arrow functions* ne crééent pas de nouveau ```this```.
 
@@ -84,8 +94,7 @@ function myFunc() {
 }
 ```
 
-On peut donc en jouer. Exemple avec HTML + CSS :
-
+### Exemple avec HTML + CSS + JS
 ```css
     .wrap {
       min-height: 100vh;
@@ -154,8 +163,9 @@ On peut donc en jouer. Exemple avec HTML + CSS :
 <script type="text/javascript" src="app.js"></script>
 </html>
 ```
-On voit bien ici que le `this` n'est pas le même.
-```javascript
+
+On voit bien ici que le `this` n'est pas le même quand on l'appelle depuis une `function` ou depuis une `arrow function` :
+```js
 const box = document.querySelector('.box')
 
 box.addEventListener('click', () => console.log(this)) // Window
@@ -169,7 +179,7 @@ box.addEventListener('click', function() {
 Maintenant pour obtenir ce résultat quand je clique sur la div : ![resultat HTML + CSS + JS](example.gif)
 
 Avant ES6 :
-```javascript
+```js
  box.addEventListener('click', function() {
       var self = this
       var first = 'opening'
@@ -189,20 +199,21 @@ Avant ES6 :
 ```
 
 Depuis ES6 :
-```javascript
+```js
 box.addEventListener('click', function() {
       let first = 'opening'
       let second = 'open'
 
       if (this.classList.contains(first)) {
-        [first, second] = [second, first]
+        [first, second] = [second, first] // destructuration
       }
 
-      this.classList.toggle(first) // supprime s'il y a, ajoute s'il n'y a pas
+      this.classList.toggle(first)
       setTimeout(() => this.classList.toggle(second))
     })
 ```
-En réalité, ici je peux remplacer le `this` par box et du coup, utiliser une arrow function. Toutefois (...ajouter exemples avec liste)
+
+>En réalité, ici je peux remplacer le `this` par box et du coup, utiliser une arrow function. Toutefois (...ajouter exemples avec liste)
 
 ## **Quand est-ce qu'il ne faut pas utiliser les** *arrow functions* **?**
 
@@ -267,7 +278,6 @@ childrenToArray('laurent', 'anojh') //  ReferenceError: arguments is not defined
 ```
 
 ### 3. Bon pour celui là, tu fais comme tu veux (bind une méthode à un objet)
-
 ```js
 const person = {
   points: 23,
@@ -292,7 +302,7 @@ person.score()
 console.log(person.points) // 24
 ```
 
-Car sinon :
+car sinon :
 ```js
 const person = {
   points: 23,
@@ -307,8 +317,6 @@ console.log(person.points) // 23
 
 # **CONCLUSION**
 
-J'utilise les *arrow functions* par défaut, et le mot clé *function* que dans les cas où je dois utiliser ```this```.
+J'utilise les *arrow functions* par défaut, et le mot clé *function* que dans les cas où je dois contraint d'utiliser ```this```.
 
-## PS
-
-Ne cherchez pas à faire toutes vos fonctions en une ligne à tout prix car comme dirait ce [monsieur](https://medium.com/@danieldng/be-boring-55653537fc99) : *"En réalité, l'ingénierie logicielle ne consiste pas à écrire du code intelligent. Il s'agit d'écrire du code maintenable, **lisible** et ennuyeux."*
+>**P.S:** ne cherchez pas à faire absolument toutes vos fonctions en une ligne car comme dirait ce [monsieur](https://medium.com/@danieldng/be-boring-55653537fc99) : *"En réalité, l'ingénierie logicielle ne consiste pas à écrire du code intelligent. Il s'agit d'écrire du code maintenable, **lisible** et ennuyeux."*
