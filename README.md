@@ -14,7 +14,7 @@ J'imagine que si tu as déjà des bases, et que tu veux rapidement savoir *comme
 
 ## Table des matières
 
-* [01. New Variables](https://github.com/kecro/ES6-Training/tree/master/01%20-%20New%20Variables#var-let--const)
+* [01. New Variables](https://github.com/kecro/ES6-Training/blob/master/01%20-%20New%20Variables/README.md#var-let--const)
 * [02. Arrow functions](https://github.com/kecro/ES6-Training/tree/master/02%20-%20Arrow%20functions#arrow-function-function--this)
 * [03. Template Strings](https://github.com/kecro/ES6-Training/tree/master/03%20-%20Template%20Strings#template-strings)
 * [04. Methods & ===](https://github.com/kecro/ES6-Training/tree/master/04%20-%20methods%20%26%20%3D%3D%3D#methods--)
