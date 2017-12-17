@@ -1,5 +1,6 @@
-On note plusieurs améliorations sur les `Objects` . En voici quelques-unes :
+# [`Objects`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets)
 
+On note plusieurs améliorations sur les `Objects` . En voici quelques-unes :
 # 1
 Avant ES6 :
 ```js
