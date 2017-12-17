@@ -1,4 +1,6 @@
-# `Promise`
+# [`Promise`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)
+
+>Une promesse est un objet qui peut être retourné de manière synchrone depuis une fonction asynchrone. [Source](https://github.com/mbeaudru/modern-js-cheatsheet#promises)
 
 ## Une légère introduction... pourquoi les promesses ?
 
@@ -222,3 +224,4 @@ Promise
 ## Liens utiles
 
 - [Utiliser les promesses](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses)
+- 
