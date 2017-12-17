@@ -1,8 +1,8 @@
-# Symbols
+# [`Symbols`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol)
 
 Un symbol, un peu comme un *hash*, est un type de données unique et inchangeable. Généralement, il est utilisé pour représenter des identifiants pour des propriétés d'un objet. Ce qui suit n'est qu'un grossier résumé de cet [article](http://putaindecode.io/fr/articles/js/es2015/symbols/).
 
-# Créer un symbol
+## Créer un symbol
 
 La fonction `Symbol()` permet de créer de nouveaux symboles :
 ```js
