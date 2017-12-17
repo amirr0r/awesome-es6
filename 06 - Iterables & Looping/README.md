@@ -1,15 +1,17 @@
-J'imagine que tu as déjà vu ce genre de boucle :
+# [`Iterables`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration) & [`Looping`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration)
 
+## Loop
+
+J'imagine que tu as déjà vu ce genre de boucle :
 ```js
 const heros = ['Luffy', 'Naruto', 'Light', 'Sakuragi']
 
 for (let i = 0; i < heros.length; i++) {
-    console.log(heros[i]);
+    console.log(heros[i])
 }
-
 ```
 
-Je te présente la boucle ```forEach``` :
+Je te présente la boucle `forEach` :
 ```js
 const heros = ['Luffy', 'Naruto', 'Light', 'Sakuragi']
 
@@ -21,20 +23,16 @@ Si tu l'utilises, tu n'auras pas le droit à ```break``` et ```continue``` :
 heros.forEach(hero => {
   if (hero === 'Light') {
     console.log('STOP')
-    break;
+    break // SyntaxError: Illegal break statement
   }
   console.log(hero) 
 })
-// break;
-// ^^^^^
-
-// SyntaxError: Illegal break statement
 ```
 
 Il y a également le ```for ..in``` :
 ```js
 for (const index in heros) {
-    console.log(heros[index]);
+    console.log(heros[index])
 }
 ```
 
@@ -42,19 +40,19 @@ Mais je le déconseille car :
 ```js
 // De nombreuses librairies modifient les prototypes comme par exemple ici :
 Array.prototype.shuffle = function() {
-     var i = this.length, j, temp;
-     if ( i == 0 ) return this;
+     var i = this.length, j, temp
+     if ( i == 0 ) return this
      while ( --i ) {
-      j = Math.floor( Math.random() * ( i + 1 ) );
-      temp = this[i];
-      this[i] = this[j];
-      this[j] = temp;
+      j = Math.floor( Math.random() * ( i + 1 ) )
+      temp = this[i]
+      this[i] = this[j]
+      this[j] = temp
     }
-    return this;
-};
+    return this
+}
 
 for (const index in heros) {
-    console.log(heros[index]);
+    console.log(heros[index])
 }
 // Luffy
 // Naruto
@@ -68,13 +66,15 @@ Sinon il y a le ```for ..of``` qui est plutôt cool, puisque ce dernier autorise
 ```js
 for (const hero of heros) {
   if (hero === 'Light') {
-    break;
+    break
   }
   console.log(hero)
 }
 // Luffy
 // Naruto
 ```
+
+## Iterables
 
 Maintenant comment récupérer l'index avec un ```for ..of``` ?
 Si tu viens de **Java**, tu dois connaître les *iterators*. En JS, pour récupérer un *iterator* sur un tableau on utilise **array.entries()** :
