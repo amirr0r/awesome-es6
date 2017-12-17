@@ -1,4 +1,4 @@
-# JS modules & npm
+# JS modules & [`npm`](https://www.npmjs.com/)
 
 Lors du développement de votre application, vous aurez certainement besoin d'utiliser des fonctions provenant de librairies externes. 
 
