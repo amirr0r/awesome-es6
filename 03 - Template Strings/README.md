@@ -1,17 +1,17 @@
-Si toi aussi t'en as marre de ce genre d'erreur :
+# [`TEMPLATE STRINGS`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits)
 
+Tu as sûrement déjà eu ce genre d'erreur :
 ```js
-const name = 'Snickers';
-const age = 100;
+const name = 'Snickers'
+const age = 100
 // Souvent, on a ce genre d'erreur :
 const sentence = "My dog's name is" + name  + " and he is " + age "years "
                                                                  ^^^^^^^^
 // SyntaxError: Unexpected string
 ```
-Pour ceux qui n'ont pas remarqué j'ai oublié de mettre un ```+``` après age.
+>Pour ceux qui n'ont pas remarqué j'ai oublié de mettre un `+` après age.
 
-Pour pallier à ça, on a les *template strings*:
-
+Pour pallier à cela, on a les *template strings*:
 ```js
 const sentence = `My dog's name is ${name} and he is ${age} years old`
 ```
@@ -27,7 +27,7 @@ Sur mon éditeur de texte, je suis obligé d'échapper le retour à la ligne
  "
 ```
 
-C'est chiant, donc il vaut mieux :
+Il vaut mieux :
 ```js
  const text = `
  <p> Yo !
@@ -36,7 +36,7 @@ C'est chiant, donc il vaut mieux :
  `
 ```
 
-** on peut y insérer du code**
+### On peut y insérer du code
 
 **Conditions**
 ```js
@@ -44,7 +44,7 @@ const song = {
   name: 'Non merci',
   artist: 'Dr Beriz',
   featuring: 'Dry'
-};
+}
 
 const markup = `
   <div class="song">
@@ -53,7 +53,7 @@ const markup = `
       ${song.featuring ? `(Featuring ${song.featuring})` : ''}
     </p>
   </div>
-`;
+` // ici j'ai mis un ternaire
 
 console.log(markup)
 // <div class="song">
@@ -70,14 +70,14 @@ const dogs = [
     { name: 'Snickers', age: 2 },
     { name: 'Hugo', age: 8 },
     { name: 'Sunny', age: 1 }
-  ];
+  ]
 
 const markup = `
 <ul class="dogs">
   ${dogs.map(dog => `
     <li> ${dog.name} is ${dog.age * 7} </li>`).join('')}
 </ul>
-`;
+`
 
 console.log(markup)
 //    <ul class="dogs">
@@ -89,7 +89,6 @@ console.log(markup)
 ```
 
 Au fait si j'enlève le  ```.join('')```, j'aurais eu :
-
 ```html
     <ul class="dogs">
         <li> Snickers is 14 </li>,
@@ -103,13 +102,13 @@ Autre exemple :
 const pates = {
     name: 'Mezzo di Pasta',
     keywords: ['tortellini', 'farfalle', 'pennoni']
-  };
+  }
 
   function renderKeywords(keywords) {
     return `<ul>
         ${keywords.map(keyword => `
           <li>${keyword}</li>`).join('')}
-      </ul>`;
+      </ul>`
   }
 
   const markup = `
@@ -117,7 +116,7 @@ const pates = {
       <h2>${pates.name}</h2>
       ${renderKeywords(pates.keywords)}
     </div>
-  `;
+  `
 console.log(markup)
 //    <div class="pates">
 //      <h2>Mezzo di Pasta</h2>
