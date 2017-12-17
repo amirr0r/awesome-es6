@@ -18,7 +18,7 @@ J'imagine que si tu as déjà des bases, et que tu veux rapidement savoir *comme
 * [02. Arrow functions](https://github.com/kecro/ES6-Training/tree/master/02%20-%20Arrow%20functions#arrow-function-function--this)
 * [03. Template Strings](https://github.com/kecro/ES6-Training/tree/master/03%20-%20Template%20Strings#template-strings)
 * [04. Methods & ===](https://github.com/kecro/ES6-Training/tree/master/04%20-%20methods%20%26%20%3D%3D%3D#methods--)
-* [05. Destructuring](https://github.com/kecro/ES6-Training/tree/master/05%20-%20Destructuring)
+* [05. Destructuring](https://github.com/kecro/ES6-Training/blob/master/05%20-%20Destructuring/README.md#destructuring)
 * [06. Iterables & Looping](https://github.com/kecro/ES6-Training/tree/master/06%20-%20Iterables%20%26%20Looping#iterables--looping)
 * [07. An Array of Improvements](https://github.com/kecro/ES6-Training/tree/master/07%20-%20An%20Array%20of%20Improvements#array)
 * [08. Say Hello to ...Spread and ...Rest](https://github.com/kecro/ES6-Training/tree/master/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest#spread-operator--rest-param)
