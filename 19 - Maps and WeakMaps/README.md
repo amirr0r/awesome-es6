@@ -92,7 +92,7 @@ console.log(players)
 
 ### Metadata
 
->On veut stocker des [métadonnées](http://eduscol.education.fr/numerique/dossier/archives/metadata/metadonnees) pas forcément sur l'objet mais à propose de l'objet
+>On veut stocker des [métadonnées](http://eduscol.education.fr/numerique/dossier/archives/metadata/metadonnees) pas forcément sur l'objet mais à propos de l'objet
 
 Use case avec manipulation du DOM:
 ```html
