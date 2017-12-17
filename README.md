@@ -12,3 +12,23 @@ Au cours de mon apprentissage du JS, il m'arrivait fréquemment de me poser cert
 
 J'imagine que si tu as déjà des bases, et que tu veux rapidement savoir *comment on écrit ça en JS ?"*, cette collection de **README** pourra t'être utile.
 
+## Table des matières
+
+1. [New Variables](https://github.com/kecro/ES6-Training/tree/master/01%20-%20New%20Variables#var-let--const)
+2. [Arrow functions](https://github.com/kecro/ES6-Training/tree/master/02%20-%20Arrow%20functions#arrow-function-function--this)
+3. [Template Strings](https://github.com/kecro/ES6-Training/tree/master/03%20-%20Template%20Strings#template-strings)
+4. [Methods & ===](https://github.com/kecro/ES6-Training/tree/master/04%20-%20methods%20%26%20%3D%3D%3D#methods--)
+5. [Destructuring](https://github.com/kecro/ES6-Training/tree/master/05%20-%20Destructuring)
+6. [Iterables & Looping](https://github.com/kecro/ES6-Training/tree/master/06%20-%20Iterables%20%26%20Looping#iterables--looping)
+7. [An Array of Improvements](https://github.com/kecro/ES6-Training/tree/master/07%20-%20An%20Array%20of%20Improvements#array)
+8. [Say Hello to ...Spread and ...Rest](https://github.com/kecro/ES6-Training/tree/master/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest#spread-operator--rest-param)
+9. [Object Literal Upgrades](https://github.com/kecro/ES6-Training/tree/master/09%20-%20Object%20Literal%20Upgrades#objects)
+10. [ Promises](https://github.com/kecro/ES6-Training/tree/er/10%20-%20Promises#promise)
+11. [ Symbols](https://github.com/kecro/ES6-Training/tree/master/11%20-%20Symbols#symbols)
+12. [ Code Quality with ESLint](https://github.com/kecro/ES6-Training/tree/master/12%20-%20Code%20Quality%20with%20ESLint#eslint)
+13. [ JavaScript Modules and Using npm](https://github.com/kecro/ES6-Training/tree/master/13%20-%20JavaScript%20Modules%20and%20Using%20npm#js-modules--npm)
+14. [ ES6 Tooling](https://github.com/kecro/ES6-Training/tree/er/14%20-%20ES6%20Tooling#es6-tooling)
+15. [ Classes](https://github.com/kecro/ES6-Training/tree/master/15%20-%20Classes#classes)
+16. [ Generators](https://github.com/kecro/ES6-Training/tree/master/16%20-%20Generators#generators)
+17. [ Proxies](https://github.com/kecro/ES6-Training/tree/master/17%20-%20Proxies#proxies)
+18. [ Sets and WeakSets](https://github.com/kecro/ES6-Training/tree/master/18%20-%20Sets%20and%20WeakSets)
