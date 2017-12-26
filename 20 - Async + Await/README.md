@@ -141,12 +141,11 @@ main()
 
 Quel code est le plus concis ? le plus lisible ? C'est assez subjectif en réalité. 
 
-Il faut également savoir que toute abstraction a un coût.
+Il faut également savoir que **toute abstraction a un coût**.
 
-Code transpilé par babel pour async / await :
+>code transpilé par babel pour async / await :
 ![async-transpiled](async-transpiled.png)
-
-Code transpilé par babel pour des promesses chaînées :
+>code transpilé par babel pour des promesses chaînées :
 ![promise-transpiled](promise-transpiled.png)
 
 ## Liens
