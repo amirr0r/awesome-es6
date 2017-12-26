@@ -46,7 +46,26 @@ co(function *() {
 L'objectif d'`async` / `await` est de simplifier le chaînage des promesses.
 > *Globalement, ça va vous permettre d'écrire du code asynchrone avec une logique synchrone.* [Grafikart](https://www.youtube.com/watch?v=uUZxHkcidps&t=20m52s).
 
-Le mot clé `await` est seulement disponible dans une fonction `async`. Il s'agit d'un préfixe pour les promesses *mettant "en attente"* le reste de la fonction jusqu'à que la promesse soit acquittée.
+`async`, placé devant la déclaration d'une fonction indique que cette dernière est asynchrone :
+- `async` encapsule le résultat de la fonction dans une promesse.
+- `async` permet d'utiliser `await` dans le corps de la fonction.
+
+```js
+async function func() {
+  console.log('titi')
+}
+
+const myFunc = async () => console.log('toto')
+
+func() // titi
+myFunc() // toto
+```
+
+`await`, placé devant une promesse, permet de mettre "en attente" le reste de la fonction jusqu'à que la promesse soit acquittée :
+- `await` ne peut être utilisé que dans une fonction `async`.
+- `await` fonctionne avec les promesses mais pas avec les callbacks.
+- si la promesse est rompue, `await` lève une exception avec la raison.
+
 ```js 
 async function myFunction() {
   // result prend la valeur renvoyé par maPromise
@@ -54,9 +73,9 @@ async function myFunction() {
   // on n'arrivera à cette ligne que lorsque "maPromise" sera résolue
 }
 ```
->Si la promesse est rompue, l'expression `await` lève une exception avec la raison.
 
-C'est le même principe que l'exemple `Promise` + `Generators`. Il suffit de remplacer `function *` par `async function` et `yield` par `await` :
+En conclusion, c'est le même principe que l'exemple `Promise` + `Generators`. 
+Il suffit de remplacer `function *` par `async function` et `yield` par `await` :
 ```js
 async function start() {
   const authResponse = await promiseRequest(authOptions())
@@ -107,7 +126,6 @@ async function sendEmails(query) {
   return await Promise.all(sentP)
 }
 
-// Il faut wrapper notre code autour d'une fonction asynchrone pour utiliser "await"
 async function main() {
   // on utilise try...catch pour récupérer les erreurs
   try {
@@ -121,13 +139,21 @@ async function main() {
 main()
 ```
 
-Quel code est le plus concis ? le plus lisible ? C'est assez subjectif en réalité.
+Quel code est le plus concis ? le plus lisible ? C'est assez subjectif en réalité. 
+
+Il faut également savoir que toute abstraction a un coût.
+
+Code transpilé par babel pour async / await :
+![async-transpiled](async-transpiled.png)
+
+Code transpilé par babel pour des promesses chaînées :
+![promise-transpiled](promise-transpiled.png)
 
 ## Liens
 
-- https://www.smooth-code.com/articles/javascript-async-await
-- https://medium.com/@benlesh/async-await-it-s-good-and-bad-15cf121ade40
-- https://joashc.github.io/posts/2016-06-10-async-await.html
-- https://www.xul.fr/ecmascript/async-await.php
-- http://putaindecode.io/fr/articles/js/es2016/async-await/
-- https://www.itrust.fr/la-programmation-asynchrone-javascript/
+- [Async / Await avec ES8](https://www.smooth-code.com/articles/javascript-async-await)
+- [async/await: It’s Good and Bad](https://medium.com/@benlesh/async-await-it-s-good-and-bad-15cf121ade40)
+- [What's wrong with async/ await? C# & JS](https://joashc.github.io/posts/2016-06-10-async-await.html)
+- [Async/Await en JavaScript: exemples](https://www.xul.fr/ecmascript/async-await.php)
+- [fonctions asynchrones (async/await)](http://putaindecode.io/fr/articles/js/es2016/async-await/)
+- [La programmation asynchrone javascript](https://www.itrust.fr/la-programmation-asynchrone-javascript/)
