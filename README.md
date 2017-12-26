@@ -33,3 +33,4 @@ J'imagine que si tu as déjà des bases, et que tu veux rapidement savoir *comme
 * [17.  Proxies](https://github.com/kecro/ES6-Training/tree/master/17%20-%20Proxies#proxies)
 * [18.  Sets and WeakSets](https://github.com/kecro/ES6-Training/blob/master/18%20-%20Sets%20and%20WeakSets/README.md#sets--weaksets)
 * [19 - Maps and WeakMaps](https://github.com/kecro/ES6-Training/tree/master/19%20-%20Maps%20and%20WeakMaps#maps--weakmaps)
+* [20 - Async + Await](https://github.com/kecro/ES6-Training/blob/master/20%20-%20Async%20%2B%20Await/README.md#async--await)
