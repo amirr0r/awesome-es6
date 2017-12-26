@@ -4,9 +4,10 @@
 
 ## Rappel
 
-Quand on execute du code **synchrone** on doit attendre qu'une tâche soit terminée avant de passer à une autre. Tandis qu'en **asynchrone**, lorsque l'on exécute une tâche, on peut directement passer à une autre tâche avant que la précédente ne soit terminée.
+- Quand on execute du code **synchrone** on doit attendre qu'une tâche soit terminée avant de passer à une autre. 
+- Tandis qu'en **asynchrone**, lorsque l'on exécute une tâche, on peut directement passer à une autre tâche avant que la précédente ne soit terminée.
 
-Jusqu'ici pour traiter les requêtes asynchrones on le faisait de cette manière :
+Jusqu'ici pour traiter des promesses chaînées on le faisait de cette manière :
 ```js
 /* Exemple 1 */
 fetch('https://api.github.com/users')
@@ -38,14 +39,14 @@ co(function *() {
   search.statuses.forEach(status => console.log(status.text))
 })
 ```
->La librairie 'co' que l'on voit ici attend le retour d'une promesse pour relancer l'execution de la fonction.
+>La librairie 'co' que l'on voit ici, attend le retour d'une promesse pour relancer l'execution de la fonction.
 
 ## A quoi servent `async` et `await` ?
 
 L'objectif d'`async` / `await` est de simplifier le chaînage des promesses.
 > *Globalement, ça va vous permettre d'écrire du code asynchrone avec une logique synchrone.* [Grafikart](https://www.youtube.com/watch?v=uUZxHkcidps&t=20m52s).
 
-Le mot clé `await` est seulement disponible dans une fonction `async`. Il s'agit un préfixe pour les promesses mettant "en attente" le reste de la fonction jusqu'à que la promesse soit acquittée.
+Le mot clé `await` est seulement disponible dans une fonction `async`. Il s'agit d'un préfixe pour les promesses *mettant "en attente"* le reste de la fonction jusqu'à que la promesse soit acquittée.
 ```js 
 async function myFunction() {
   // result prend la valeur renvoyé par maPromise
@@ -53,9 +54,9 @@ async function myFunction() {
   // on n'arrivera à cette ligne que lorsque "maPromise" sera résolue
 }
 ```
+>Si la promesse est rompue, l'expression `await` lève une exception avec la raison.
 
-Si on reprend l'exemple précédent et que l'on remplace `function *` par `async function` et `yield` par `await`, c'est le même principe. 
-Pour obtenir le même résultat :
+C'est le même principe que l'exemple `Promise` + `Generators`. Il suffit de remplacer `function *` par `async function` et `yield` par `await` :
 ```js
 async function start() {
   const authResponse = await promiseRequest(authOptions())
@@ -68,11 +69,12 @@ async function start() {
 start()
 ```
 
+>**Attention:** Il ne faut pas confondre `await` et `Promise.all`. `Promise.all` vous permettra de « patienter » pendant l'exécution de plusieurs promesses en parallèle. Alors qu'avec `await` les promesses sont exécutées en série et pas en parallèle.
+
 ## Exemple concret + capture d'erreurs
 
-Ici je reprends l'exemple de [naholyr](http://putaindecode.io/fr/articles/js/es2016/async-await/). 
-
-**Contexte**: On est le 6 décembre, c'est la Saint-Nicolas, on veut envoyer un message à tous nos utilisateurs qui s'appellent Nicolas :
+*Ici je reprends l'exemple de [naholyr](http://putaindecode.io/fr/articles/js/es2016/async-await/).*
+**Contexte**: Le 6 décembre, c'est la Saint-Nicolas, on veut envoyer un message à tous nos utilisateurs qui s'appellent Nicolas :
 
 Sans `async / await` :
 ```js
@@ -123,7 +125,6 @@ Quel code est le plus concis ? le plus lisible ? C'est assez subjectif en réali
 
 ## Liens
 
-- https://www.youtube.com/watch?v=0GoG-Kxhia8
 - https://www.smooth-code.com/articles/javascript-async-await
 - https://medium.com/@benlesh/async-await-it-s-good-and-bad-15cf121ade40
 - https://joashc.github.io/posts/2016-06-10-async-await.html
