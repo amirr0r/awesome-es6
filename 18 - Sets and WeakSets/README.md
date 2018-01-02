@@ -33,7 +33,7 @@ console.log(students.has('Romain')) // false
 console.log(students.has('Bineta')) // true
 ```
 
-- `size` et pas `length`
+- `size` et pas ~~`length`~~
 ```js
 const students = new Set(['Antoine', 'Bineta', 'Idriss'])
 console.log(students.size) // 3
