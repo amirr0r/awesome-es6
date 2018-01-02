@@ -99,9 +99,8 @@ Je conseille de le lancer toutes les fois où vous sauvegardez vos fichiers. Pou
 ## ESLint sur ATOM
 
 Allez dans les `Settings`, installez `linter` et `linter-eslint`
->Pour ceux qui sont sur VSCode, j'ai la flemme, Google est votre ami.
 
-## Autoriser uniquement le code passé par ESLint dans votre repos git
+## Autoriser uniquement le code passé par ESLint dans votre repo git
 
 Très utile, si vous travaillez en équipe.
 
