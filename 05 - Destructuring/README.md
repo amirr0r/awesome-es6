@@ -112,7 +112,10 @@ console.log(first, second); // Sangoku Vegeta
 [first, second] = [second, first];
 console.log(first, second); // Vegeta Sangoku
 ```
-> Ici si je retire le `;` j'ai une erreur.
+> Ici si je retire le `;` j'ai une erreur. Pour ceux qui se demandent *"pourquoi je ne mets pas de ';' !?"* je vous invite à lire et à regarder le [standard js](https://github.com/standard/standard#the-rules) et ces quelques liens :
+- [Are Semicolons Necessary in JavaScript?](https://www.youtube.com/watch?v=gsfbh17Ax9I)
+- [An open letter to javascript leaders regarding Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
+- [Javascript semicolons](http://inimino.org/~inimino/blog/javascript_semicolons)
 
 Esssaye de comprendre et de décortiquer ce bout de code :
 ```js
