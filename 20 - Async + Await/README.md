@@ -152,7 +152,9 @@ Il faut également savoir que **toute abstraction a un coût**.
 
 - [Async / Await avec ES8](https://www.smooth-code.com/articles/javascript-async-await)
 - [async/await: It’s Good and Bad](https://medium.com/@benlesh/async-await-it-s-good-and-bad-15cf121ade40)
+- [dotJS 2017 - Wes Bos - Async + Await](https://www.youtube.com/watch?v=9YkUCxvaLEk)
+- [fonctions asynchrones (async/await)](http://putaindecode.io/fr/articles/js/es2016/async-await/)
+- [async / await in JavaScript - What, Why and How - Fun Fun Function](https://www.youtube.com/watch?v=568g8hxJJp4)
 - [What's wrong with async/ await? C# & JS](https://joashc.github.io/posts/2016-06-10-async-await.html)
 - [Async/Await en JavaScript: exemples](https://www.xul.fr/ecmascript/async-await.php)
-- [fonctions asynchrones (async/await)](http://putaindecode.io/fr/articles/js/es2016/async-await/)
 - [La programmation asynchrone javascript](https://www.itrust.fr/la-programmation-asynchrone-javascript/)

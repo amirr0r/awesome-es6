@@ -1,4 +1,4 @@
-# ES6-Training
+# awesome-es6 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ES6 est une mise à jour majeure de JavaScript qui comprend des dizaines de nouvelles fonctionnalités. En mettant l'accent sur la simplicité et la lisibilité, j'ai pour intention de décrire ce qui est nouveau en JS et de montrer par le biais de nombreux exemples quand et comment utiliser ces nouveautés.
 
@@ -34,3 +34,19 @@ J'imagine que si tu as déjà des bases, et que tu veux rapidement savoir *comme
 * [18.  Sets and WeakSets](https://github.com/kecro/ES6-Training/blob/master/18%20-%20Sets%20and%20WeakSets/README.md#sets--weaksets)
 * [19 - Maps and WeakMaps](https://github.com/kecro/ES6-Training/tree/master/19%20-%20Maps%20and%20WeakMaps#maps--weakmaps)
 * [20 - Async + Await](https://github.com/kecro/ES6-Training/blob/master/20%20-%20Async%20%2B%20Await/README.md#async--await)
+
+## Awesome Exercices
+
+- [thot.space](https://thot.space/javascript/) *Pensez à explorer le site ;)*
+- [NaN JS](https://github.com/nan-ci/js)
+- [ES6 Sandbox and Exercises - Marijn Haverbeke](http://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/)
+- [ES6 Katas](http://es6katas.org/)
+- [Learn Harmony](http://learnharmony.org)
+
+## Awesome Repositories
+
+- [NaN examples](https://github.com/nan-ci/js-examples)
+- [ES6 Learning](https://github.com/ericdouglas/ES6-Learning#ecmascript-6-learning)
+- [You dont know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond#you-dont-know-js-es6--beyond)
+
+[How to learn ES6](https://medium.com/javascript-scene/how-to-learn-es6-47d9a1ac2620)
