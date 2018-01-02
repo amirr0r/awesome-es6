@@ -35,7 +35,7 @@ console.log(last) // Gator
 console.log(twitter) // @redbull11570
 ```
 
-Maintenant pour renommer le nom des variables que tu récupère :
+Maintenant pour renommer le nom des variables que tu récupères :
 ```js
 const {last: nom, snapchat: snap} = person
 
@@ -43,7 +43,7 @@ console.log(nom) // Gator
 console.log(snap) // aghostor
 ```
 
-Enfin, pour extraire les propriétés d'un *objet* contenu dans un *objet* :
+Enfin, pour extraire les propriétés d'un *objet* contenues dans un *objet* :
 ```js
 const person = {
   first: 'Ali',
