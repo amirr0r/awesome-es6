@@ -1,6 +1,6 @@
 # [`Iterables`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration) & [`Looping`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration)
 
-## Loop
+## ``For ...``
 
 J'imagine que tu as déjà vu ce genre de boucle :
 ```js
@@ -10,7 +10,7 @@ for (let i = 0; i < heros.length; i++) {
     console.log(heros[i])
 }
 ```
-
+## ``forEach``
 Je te présente la boucle `forEach` :
 ```js
 const heros = ['Luffy', 'Naruto', 'Light', 'Sakuragi']
@@ -28,7 +28,7 @@ heros.forEach(hero => {
   console.log(hero) 
 })
 ```
-
+## ``for ..in``
 Il y a également le ```for ..in``` :
 ```js
 for (const index in heros) {
@@ -60,7 +60,7 @@ for (const index in heros) {
 // Sakuragi
 // [Function]
 ```
-
+## ``for ..of``
 Sinon il y a le ```for ..of``` qui est plutôt cool, puisque ce dernier autorise ```break``` et n'affiche pas les *prototypes* modifiés :
 
 ```js
@@ -72,6 +72,22 @@ for (const hero of heros) {
 }
 // Luffy
 // Naruto
+```
+Pour parcourir un objet avec un ```for ..of```, tu peux utiliser la méthode ```Object.keys```
+
+```js
+const pomme = {
+  couleur: 'rouge',
+  provenance : 'espagne',
+  juteuse : true
+}
+
+for (const prop of Object.keys(pomme)) {
+  console.log(prop, ':' ,pomme[prop])
+}
+// couleur : rouge
+// provenance : espagne
+// juteuse : true
 ```
 
 ## Iterables
@@ -108,21 +124,3 @@ for (const [i, hero] of heros.entries()) {
 // 2 - Light
 // 3 - Sakuragi
 ```
-
-Les méthodes ```Object.values``` et ```Object.entries``` ne sont pas encore disponibles. Si tu veux parcourir un objet avec un ```for ..of```, tu peux utiliser la méthode ```Object.keys```
-
-```js
-const pomme = {
-  couleur: 'rouge',
-  provenance : 'espagne',
-  juteuse : true
-}
-
-for (const prop of Object.keys(pomme)) {
-  console.log(prop, ':' ,pomme[prop])
-}
-// couleur : rouge
-// provenance : espagne
-// juteuse : true
-```
-
