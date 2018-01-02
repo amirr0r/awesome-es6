@@ -17,7 +17,7 @@ Pourquoi est ce que je vous présente `SystemJS` ? Avec lui, on peut très rapid
 
 1. Précisez que `browser-sync` est un de vos outils de développement avec `npm install browser-sync --save-dev`.
 
-2. Dans votre  remplacez cette ligne :
+2. Dans votre ``package.json``, remplacez cette ligne :
 ```json
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -53,7 +53,7 @@ console.log(kebabCase("I'm soooo cool ⛓⛓⛓⛓"))
 console.log(addTax(100, 0.15))
 ```
 
->Vous contaterez qu'il prends quelques secondes avant de se lancer. Je le ne recommande donc pas si vous développez une grosse application.
+>Vous constaterez qu'il prends quelques secondes avant de se lancer. Je le ne recommande donc pas si vous développez une grosse application.
 
 ## 2. Babel
 
@@ -70,7 +70,7 @@ Mais nous n'avons fait ici que la moitié du chemin.
 
 **Babel** ne fonctionne que sur la syntaxe (arrow function, template strings, const, let ...). En effet, il ne convertira pas certaines nouvelles méthodes comme [`Array.from()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/from). Dans ces cas là, nous utilisons des `Polyfill`.
 
-C'est très simple, `Polyfill` en gros c'est : *"si le navigateur ne l'implémente pas, nous allons le récréer avec du Javascript"*. Et ce qui est plutôt cool, c'est que [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript) ajoute toujours une section `Polyfill` sur la doc des nouvelles méthodes. Allez y vérifier pour [`Array.from()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/from). Et ce qui l'est encore plus, c'est que plutôt que de copier-coller à chaque fois, on tout simplement utiliser les [polyfill de Babel](https://babeljs.io/docs/usage/polyfill/). Et encore mieux, il y a [Polyfill.io](https://polyfill.io/v2/docs/).
+`Polyfill` c'est : *"si le navigateur ne l'implémente pas, nous allons le récréer avec du Javascript"*. Et ce qui est plutôt cool, c'est que [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript) ajoute toujours une section `Polyfill` sur la doc des nouvelles méthodes. Vérifiez pour [`Array.from()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/from) par exemple. D'autre part, plutôt que de le copier-coller à chaque fois, on peut tout simplement utiliser les [polyfill de Babel](https://babeljs.io/docs/usage/polyfill/) ou encore [Polyfill.io](https://polyfill.io/v2/docs/).
 
 Vous n'avez qu'à ajouter : 
 ```html
