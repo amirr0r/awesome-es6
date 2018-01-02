@@ -6,7 +6,7 @@ Les _modules_ JavaScript nous permettent de découper notre code dans des fichie
 
 >**npm** a commencé en tant que gestionnaire de paquets pour Node.js, mais il a depuis évolué pour devenir le gestionnaire de paquets pour JavaScript et le développement de front end en général.
 
-Pour celà,  nous utilisons `import` et des `export` : instructions pour partager des choses (variables, fonctions, objets ...) entre les fichiers. Chaque fichier va **importer** les dépendances dont il a besoin et **exporter**tout ce qu'il veut rendre disponibles dans les autres fichiers.
+Pour celà,  nous utilisons `import` et des `export` : instructions pour partager des choses (variables, fonctions, objets ...) entre les fichiers. Chaque fichier va **importer** les dépendances dont il a besoin et **exporter** tout ce qu'il veut rendre disponibles dans les autres fichiers.
 
 
 ## Nos propres modules
@@ -50,7 +50,7 @@ Ou tout à la fois :
 export { couponCodes, addTax, discountPrice }
 ```
 
-Il existe l'`export default`,lorsque l'on souhaite n'exporter qu'une seule valeur.
+Il existe l'`export default`, lorsque l'on souhaite n'exporter qu'une seule valeur.
 
 ```js
 const taxRate = 0.13
