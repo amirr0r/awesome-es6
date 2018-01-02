@@ -91,9 +91,44 @@ for (const prop of Object.keys(pomme)) {
 ```
 
 ## Iterables
+> Si tu viens de Java, tu dois connaître les iterators.
 
-Maintenant comment récupérer l'index avec un ```for ..of``` ?
-Si tu viens de **Java**, tu dois connaître les *iterators*. En JS, pour récupérer un *iterator* sur un tableau on utilise **array.entries()** :
+Un objet est un **itérable** lorsqu'il implémente une fonction ``next()``. Cette dernière retourne un objet qui contient deux propriétés:
+- ``value`` : valeur actuelle de l'exécution en cours
+- ``done`` : un booléen qui indique si l'itération est terminée ou non
+
+Les appels successifs de ``next()`` permettront d'obtenir toutes les valeurs d'un objet. Voyons comment nous pouvons itérer sur un tableau simple ['a', 'b']:
+```js
+iteratorArray.next();
+// -> Object {value: "a", done: false}
+iteratorArray.next();
+// -> Object {value: "b", done: false}
+iteratorArray.next();
+// -> Object {value: undefined, done: true}
+```
+
+Donc, vous allez probablement demander maintenant *"Comment obtenir cet Iterator?"*. 
+Eh bien il suffit d'utiliser l'une de ces fonctions :
+
+- ``entries ()`` renvoie un ensemble de clés / valeurs
+- ``keys ()`` renvoie les clés
+- ``values ​​()`` renvoie des valeurs
+
+> ``Object.keys(monObjet)`` et ``Object.entries(monObjet)`` dans le cas d'un ``Object``. ``monArray.entries()`` dans le cas d'un tableau.
+
+Exemple : 
+```js
+const obj = { a: 1, b: 2 }
+
+console.log(Object.keys(obj)) // [ 'a', 'b' ]
+console.log(Object.values(obj)) // [ 1, 2 ]
+console.log(Object.entries(obj)) // [ [ 'a', 1 ], [ 'b', 2 ] ]
+```
+Beaucoup de concept de JavaScript profite de ce protocole: boucles, spread, générateurs, destructuring... Il est donc important de le comprendre.
+
+### Array
+
+Maintenant comment récupérer l'index avec un ```for ..of``` ? Spoiler: on peut utiliser **array.entries()** :
 
 ![Ce que nous donne l'iterator](iterable.png)
 
@@ -124,3 +159,9 @@ for (const [i, hero] of heros.entries()) {
 // 2 - Light
 // 3 - Sakuragi
 ```
+## Liens utiles 
+- [Iteration Protocol](http://putaindecode.io/en/articles/js/es2015/iterators/)
+- [Iterables et itérateurs dans ECMAScript 6](http://2ality.com/2015/02/es6-iteration.html)
+- [Protocoles d'itération](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [ES6 en profondeur: itérateurs et pour de la boucle](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
+- [Les itérateurs ES6 en profondeur](https://ponyfoo.com/articles/es6-iterators-in-depth)
