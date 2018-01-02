@@ -1,6 +1,6 @@
 # [`VAR`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/var), [`LET`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/let) & [`CONST`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/const)
 
-Ok donc pour déclarer des variables, voilà comment on fait :
+Pour déclarer des variables en JS, il existe trois mots-clés :
 
 ```js
 var myVar
@@ -10,8 +10,8 @@ const myConst
 
 ## 1. Quelle est la différence entre les mots clés ```var```, ```let``` et ```const``` ?
 
-- ```let``` :  te permet de modifier, autant de fois que tu le veux, sa valeur.
-- ```const``` :  le contraire de let, tu ne pourras pas modifier sa valeur (pas même une seule fois).
+- ```let``` :  on peut réassigner la valeur de la variable autant de fois que l'on veut.
+- ```const``` :  comme son nom l'indique c'est une **constante**, sa valeur ne peut pas être modifiée par des réaffectations ultérieures.
 
 ```js
 const person = "Nick";
@@ -26,7 +26,8 @@ console.log(person) // "John", le réassignement est permis avec let
 
 ## 2.  Pourquoi ne pas utiliser ```var``` ?
 
-C'est une histoire de **scope** mon gars ! Le **scope** correspond à la portée, le contexte dans lequel des valeurs, expressions sont disponibles, "visibles".
+C'est une histoire de **scope** ! 
+Le **scope** correspond à la portée, le contexte dans lequel des valeurs, expressions sont disponibles, "visibles".
 
 On constate plusieurs comportements anormaux chez ```var```. Parmi lesquels :
 ```js
@@ -35,8 +36,9 @@ console.log(myVar) // undefined
 var myVar = 12
 console.log(myVar) // 12
 ```
+Il devrait y avoir une erreur puisque l'on redéclare `myVar`. 
 
-Il devrait y avoir une erreur puisque l'on redéclare `myVar`. Si on avait mis ```let``` :
+Si on avait mis ```let``` :
 ```js
 let myLet
 console.log(myLet) // undefined
@@ -123,7 +125,7 @@ test()
 console.log(bool) // false
 ```
 
-Enfin, il y a ce qu'on appel la [*Temporal dead zone*](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone) ou *TDZ* :
+Enfin, il y a ce qu'on appel la [*Temporal dead zone*](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone) ou *TDZ* (je vous laisse jetter un coup d'oeil à la doc) :
 ```js
 console.log(pizza) // undefined
 var pizza = '4 fromages'
