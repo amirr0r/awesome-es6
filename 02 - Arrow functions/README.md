@@ -213,7 +213,7 @@ box.addEventListener('click', function() {
     })
 ```
 
->En réalité, ici je peux remplacer le `this` par box et du coup, utiliser une arrow function. Toutefois (...ajouter exemples avec liste)
+>En réalité, ici je peux remplacer le `this` par box et du coup, utiliser une arrow function.
 
 ## **Quand est-ce qu'il ne faut pas utiliser les** *arrow functions* **?**
 
@@ -267,7 +267,7 @@ function childrenToArray (){
 childrenToArray('laurent', 'anojh') // [ 'laurent', 'anojh' ]
 ```
 
-Avec *arrow functions* :
+Avec les *arrow functions*, tu ne peux pas uitiliser le mot clé ``arguments`` :
 ```js
 const childrenToArray = () => {
   const children = Array.from(arguments)
@@ -277,7 +277,14 @@ const childrenToArray = () => {
 childrenToArray('laurent', 'anojh') //  ReferenceError: arguments is not defined
 ```
 
-### 3. Bon pour celui là, tu fais comme tu veux (bind une méthode à un objet)
+Toutefois, tu peux utiliser le ``rest param`` (que l'on verra plus tard) :
+```js
+const childrenToArray = (...children) => console.log(children)
+
+childrenToArray('laurent', 'anojh') // [ 'laurent', 'anojh' ]
+```
+
+### 3. Bind une méthode à un objet (question de goût)
 ```js
 const person = {
   points: 23,
