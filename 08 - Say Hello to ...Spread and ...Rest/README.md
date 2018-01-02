@@ -49,6 +49,28 @@ console.log(commandes) // [ 'Margarita', '4 fromages', 'Panini Thon', 'Frites' ]
 commandes = [...commandeTable1, 'Eau', ...commandeTable2] 
 console.log(commandes) // [ 'Margarita', '4 fromages', 'Eau', 'Panini Thon', 'Frites' ]
 ```
+### Objects
+
+#### Reference
+```js
+const amir2017 = person
+amir2017.age++
+console.log(amir2017) // { name: 'amir', age: 20 }
+console.log(person) // { name: 'amir', age: 20 }
+```
+
+#### Copy 
+```js
+const person = {
+    name: 'amir',
+    age: 19
+}
+
+const amir = {...person}
+amir.age++
+console.log(amir) // { name: 'amir', age: 20 }
+console.log(person) // { name: 'amir', age: 19 }
+```
 
 ## `Rest param`
 
@@ -71,27 +93,4 @@ console.log(capitaine, assistant, joueurs)
 // Jordan Wade [ 'Curry', 'Chamberlain', 'Bryant' ]
 console.log(capitaine, assistant, ...joueurs)
 // Jordan Wade Curry Chamberlain Bryant
-```
-
-### Objects
-
-#### Reference
-```js
-const amir2017 = person
-amir2017.age++
-console.log(amir2017) // { name: 'amir', age: 20 }
-console.log(person) // { name: 'amir', age: 20 }
-```
-
-#### Copy 
-```js
-const person = {
-    name: 'amir',
-    age: 19
-}
-
-const amir = {...person}
-amir.age++
-console.log(amir) // { name: 'amir', age: 20 }
-console.log(person) // { name: 'amir', age: 19 }
 ```
