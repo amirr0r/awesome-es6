@@ -1,11 +1,11 @@
 #  [`Methods`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Index_des_m%C3%A9thodes) & [`===`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_de_comparaison)
 
-Tout ceci n'est pas forcément présent depuis ES6, mais c'est utile :
+Tout ceci n'est pas forcément présent depuis ES6, mais n'hésitez pas à jetter un coup d'oeil :
 - [js-methods](https://github.com/nan-ci/js-methods)
 
 Ok, alors si toi aussi tu t'es déjà demandé *pourquoi est-ce qu'il y a un `===` en JS ?* 
 
-En gros, il y a deux opérateurs de comparaison :
+Il existe deux opérateurs de comparaison :
 
 - comparaison strict (```===```)
 - comparaison d'égalité faible (```==```)
