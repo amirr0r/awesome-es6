@@ -97,20 +97,11 @@ start()
 
 Sans `async / await` :
 ```js
-function sendEmails(query) {
-  const usersP = getUsers(query)
-  // On récupère le champ "email" de tous les utilisateurs
-  const emailsP = usersP.then(users => users.map(u => u.email))
-  // Pour chaque email…
-  const sentP = emailsP.then(emails =>
-    emails.map(email => {
-      // … on envoie un mail
-      return sendMail(email, "Bonne fête")
-    })
-  )
-  // On attend que tous les envois soient résolus
-  return Promise.all(sentP)
-}
+// On envoie un mail pour chaque user et on attend que tous les envois soient résolus
+
+const sendEmails = query => getUsers(query)
+  .then(users => users.map(user => sendMail(users.email, "Bonne fête")))
+  .then(sentP => Promise.all(sentP))
 
 sendEmails({ firstName: "Nicolas" })
   .then(() => console.log("OK"))
@@ -119,11 +110,10 @@ sendEmails({ firstName: "Nicolas" })
 
 Avec `async / await` :
 ```js
-async function sendEmails(query) {
+const sendEmails = async query => {
   const users = await getUsers(query)
-  const emails = users.map(u => u.email)
-  const sentP = emails.map(email => sendMail(email, "Bonne fête"))
-  return await Promise.all(sentP)
+  const sentP = users.map(user => sendMail(user.email, "Bonne fête"))
+  return Promise.all(sentP)
 }
 
 async function main() {
