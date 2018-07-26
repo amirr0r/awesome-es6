@@ -36,12 +36,16 @@ J'imagine que si tu as déjà des bases, et que tu veux rapidement savoir *comme
 * [20 - Async + Await](https://github.com/kecro/ES6-Training/blob/master/20%20-%20Async%20%2B%20Await/README.md#async--await)
 
 ## Awesome Exercices
-
-- [thot.space](https://thot.space/javascript/) *Pensez à explorer le site ;)*
+- The **best** : [js-training](https://github.com/wildcodeschoolparis/js-training)
+- [thot.space](https://thot.space/javascript/) *Pensez à explorer le site ;)* 
 - [NaN JS](https://github.com/nan-ci/js)
 - [ES6 Sandbox and Exercises - Marijn Haverbeke](http://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/)
 - [ES6 Katas](http://es6katas.org/)
 - [Learn Harmony](http://learnharmony.org)
+
+## Awesome Youtube Channels
+- [The Coding Train](https://www.youtube.com/user/shiffman/featured)
+- [Fun Fun Function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
 
 ## Awesome Repositories
 
